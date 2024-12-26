@@ -6,6 +6,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 public class Booking {
@@ -15,4 +17,6 @@ public class Booking {
     private Integer bookingId;
     private Integer flightId;
     private Integer passengerId;
+    private LocalDateTime createdAt;
+    private LocalDateTime updateAt;
 }

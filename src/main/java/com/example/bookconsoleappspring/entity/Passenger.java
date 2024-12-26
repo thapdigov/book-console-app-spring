@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 public class Passenger {
@@ -16,6 +18,8 @@ public class Passenger {
     private Integer passengerID;
     private String name;
     private String surname;
+    private LocalDateTime createdAt;
+    private LocalDateTime updateAt;
 
     @JsonIgnore
     public String fullName() {
