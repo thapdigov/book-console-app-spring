@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 @Data
 public class Booking {
     @Id
-    @SequenceGenerator(name = "flight_seq", allocationSize = 1)
-    @GeneratedValue(generator = "flight_seq")
+    @SequenceGenerator(name = "booking_seq", allocationSize = 1)
+    @GeneratedValue(generator = "booking_seq")
     private Integer bookingId;
     private Integer flightId;
     private Integer passengerId;

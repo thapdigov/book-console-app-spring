@@ -13,8 +13,8 @@ import java.time.LocalDateTime;
 @Data
 public class Passenger {
     @Id
-    @SequenceGenerator(name = "flight_seq", allocationSize = 1)
-    @GeneratedValue(generator = "flight_seq")
+    @SequenceGenerator(name = "passenger_seq", allocationSize = 1)
+    @GeneratedValue(generator = "passenger_seq")
     private Integer passengerID;
     private String name;
     private String surname;
@@ -22,7 +22,7 @@ public class Passenger {
     private LocalDateTime updateAt;
 
     @JsonIgnore
-    public String fullName() {
+    public String getFullName() {
         return name + surname;
     }
 }

@@ -2,7 +2,7 @@ package com.example.bookconsoleappspring.dto;
 
 import java.time.LocalDateTime;
 
-public record CreateFlightResponse(
+public record FlightDto(
         Integer flightID,
         String from,
         String to,

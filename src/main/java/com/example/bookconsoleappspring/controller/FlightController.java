@@ -1,6 +1,8 @@
 package com.example.bookconsoleappspring.controller;
 
 import com.example.bookconsoleappspring.dto.CreateFlightRequest;
+import com.example.bookconsoleappspring.dto.CreateFlightResponse;
+import com.example.bookconsoleappspring.dto.FlightDto;
 import com.example.bookconsoleappspring.service.FlightService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/flights")
@@ -46,9 +50,7 @@ public class FlightController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<> deleteFLight(@PathVariable int id) {
-        boolean isDeleted = flightService.deleteFlight(id);
-
-        return isDeleted? ResponseEntity.ok().build() : ResponseEntity.badRequest().build();
+    public void deleteFLight(@PathVariable int id) {
+        flightService.deleteFlight(id);
     }
 }
