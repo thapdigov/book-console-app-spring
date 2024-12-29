@@ -35,7 +35,6 @@ public class BookingService {
     public BookingDto createBooking(CreateBookingRequest request) {
         Booking booking = new Booking();
 
-        booking.setBookingId(request.bookingId());
         booking.setFlightId(request.flightId());
         booking.setPassengerId(request.passengerId());
         booking.setCreatedAt(LocalDateTime.now());

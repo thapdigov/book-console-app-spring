@@ -29,7 +29,7 @@ public class FlightController {
     }
 
     @GetMapping
-    public List<FlightDto> getAllFlight(@RequestParam boolean within24hours) {
+    public List<FlightDto> getAllFlight(@RequestParam(required = false) boolean within24hours) {
         if (within24hours) {
             return flightService.getAllWithin24Hours();
         }
