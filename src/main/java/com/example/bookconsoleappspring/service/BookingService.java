@@ -6,10 +6,12 @@ import com.example.bookconsoleappspring.entity.Booking;
 import com.example.bookconsoleappspring.mapper.BookingMapper;
 import com.example.bookconsoleappspring.repository.BookingRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Service
 public class BookingService {
 
     private final BookingRepository bookingRepository;
@@ -35,7 +37,6 @@ public class BookingService {
     public BookingDto createBooking(CreateBookingRequest request) {
         Booking booking = new Booking();
 
-        booking.setBookingId(request.bookingId());
         booking.setFlightId(request.flightId());
         booking.setPassengerId(request.passengerId());
         booking.setCreatedAt(LocalDateTime.now());
