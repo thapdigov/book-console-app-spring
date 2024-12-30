@@ -11,8 +11,8 @@ public class FlightMapper {
     public FlightDto toFlightDto(Flight flight) {
         return new FlightDto(
                 flight.getFlightID(),
-                flight.getTo(),
                 flight.getFrom(),
+                flight.getTo(),
                 flight.getTime(),
                 flight.getAvailableSeats()
         );
@@ -21,8 +21,8 @@ public class FlightMapper {
     public CreateFlightResponse toCreateFlightResponse(Flight flight) {
         return new CreateFlightResponse(
                 flight.getFlightID(),
-                flight.getTo(),
                 flight.getFrom(),
+                flight.getTo(),
                 flight.getTime(),
                 flight.getAvailableSeats()
         );
