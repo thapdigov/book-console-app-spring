@@ -4,7 +4,6 @@ import com.example.bookconsoleappspring.dto.BookingDto;
 import com.example.bookconsoleappspring.entity.Booking;
 import com.example.bookconsoleappspring.entity.Flight;
 import com.example.bookconsoleappspring.entity.Passenger;
-import com.example.bookconsoleappspring.repository.BookingRepository;
 import com.example.bookconsoleappspring.repository.FlightRepository;
 import com.example.bookconsoleappspring.repository.PassengerRepository;
 import jakarta.persistence.EntityNotFoundException;
