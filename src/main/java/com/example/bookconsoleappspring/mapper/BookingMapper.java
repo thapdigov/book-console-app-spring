@@ -23,7 +23,8 @@ public class BookingMapper {
 
     public BookingDto toBookingDto(Booking booking) {
         String fullname = passengerRepository
-                .findById(booking.getPassengerId()).map(Passenger::getFullName)
+                .findById(booking.getPassengerId())
+                .map(Passenger::getFullName)
                 .orElseThrow(EntityNotFoundException::new);
 
         Flight flight = flightRepository.findById(booking.getFlightId())
